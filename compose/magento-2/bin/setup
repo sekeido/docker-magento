@@ -28,7 +28,7 @@ bin/clinotty bin/magento setup:install \
   --admin-password=password123 \
   --language=de_DE \
   --currency=EUR \
-  --timezone=America/New_York \
+  --timezone=Europe/Berlin \
   --use-rewrites=1
 
 echo "Turning on developer mode.."
@@ -37,7 +37,7 @@ bin/clinotty bin/magento deploy:mode:set developer
 bin/clinotty bin/magento indexer:reindex
 
 echo "Forcing deploy of static content to speed up initial requests..."
-bin/clinotty bin/magento setup:static-content:deploy -f 
+bin/clinotty bin/magento setup:static-content:deploy -f
 
 echo "Enabling redis for cache..."
 bin/clinotty bin/magento setup:config:set --no-interaction --cache-backend=redis --cache-backend-redis-server=redis --cache-backend-redis-db=0
