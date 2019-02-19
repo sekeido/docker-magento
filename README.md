@@ -89,7 +89,7 @@ Same result as the one-liner above. Just replace `magento2.test` references with
 
 ```
 # Quick setup for a new instance of Magento 2:
-curl -s https://raw.githubusercontent.com/markshust/docker-magento/master/lib/template|bash -s -- magento-2
+curl -s https://raw.githubusercontent.com/sekeido/docker-magento/master/lib/template|bash -s -- magento-2
 
 # New projects can easily download by version:
 bin/download 2.3.0
